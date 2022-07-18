@@ -4,14 +4,6 @@ const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 
 
-/*
-<div class="todo">
-          <li></li>
-          <button>Deletr</button>
-          <button>Checked</button>
-        </div>
-*/
-
 // Event Listeners
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
@@ -54,8 +46,14 @@ function addTodo(event) {
 function deleteCheck(e) {
   const item = e.target;
   //DELETE
-  if(item.classList [0] === 'trash-btn') {
+  if (item.classList [0] === 'trash-btn') {
     const todo = item.parentElement;
     todo.remove();
+  }
+
+  // CHECK MARK
+  if (item.classList[0] === "complete-btn") {
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
   }
 }
