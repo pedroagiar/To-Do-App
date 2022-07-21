@@ -25,6 +25,9 @@ function addTodo(event) {
   newTodo.classList.add('todo-item');
   todoDiv.appendChild(newTodo);
 
+  // ADD TODO LS
+  saveLocalTodos(todoInput.value);
+
   //CHECK MARK BUTTON
   const completedButton = document.createElement('Button');
   completedButton.innerHTML = '<i class="fas fa-check"> </i>';
@@ -92,7 +95,11 @@ function filterTodo(e) {
 function saveLocalTodos(todo){
   // CHECK IF ALREADY EXISTS TODOS!
   let todos;
-  if(localStorage.getItem('todos') === null){
+  if(localStorage.getItem("todos") === null){
     todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
   }
+  todos.push(todo);
+  localStorage.setItem('todos', JSON.stringify(todos));
 }
