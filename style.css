@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #f6d365, #fda085);
+  background-image: linear-gradient(120deg, #8AE8FF, #4F96A8);
   color: white;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
@@ -14,6 +14,7 @@ body {
 
 header {
   font-size: 1.5rem;
+  text-shadow: 2px 2px #F5AEA4;
 }
 
 header, form {
@@ -31,14 +32,14 @@ form input, form button {
 }
 
 form button {
-  color: #fda085;
+  color: #F5AEA4;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form button:hover {
-  background: #fda085;
+  background: #F5AEA4;
   color: white;
 }
 
@@ -69,7 +70,7 @@ form button:hover {
 }
 
 .trash-btn, .complete-btn {
-  background: #ff6f47;
+  background: #F5AEA4;
   color: white;
   border: 1rem;
   padding: 1rem;
@@ -112,18 +113,16 @@ select {
   position: relative;
   overflow: hidden;
 }
-
 select {
-  color: #ff6f47;
+  color: #F5AEA4;
   width: 10rem;
   cursor: pointer;
   padding: 1rem;
 }
-
 .select::after {
   content: "\25BC";
   position: absolute;
-  background-color: #fda085;
+  background-color: #F5AEA4;
   top: 0;
   right: 0;
   padding: 1rem;
@@ -134,5 +133,10 @@ select {
 
 .select:hover::after {
   background: white;
-  color: #fda085;
+  color: #F5AEA4;
+}
+
+footer {
+  text-align: center;
+  margin: 15px;
 }
