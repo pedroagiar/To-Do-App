@@ -140,3 +140,15 @@ footer {
   text-align: center;
   margin: 15px;
 }
+
+.fa-instagram-square {
+  margin-top: 10px;
+  color: #F5AEA4;
+  font-size: 40px;
+}
+
+.fa-github-square {
+  margin-top: 10px;
+  color: #F5AEA4;
+  font-size: 40px;
+}
